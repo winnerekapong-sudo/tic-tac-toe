@@ -3,21 +3,18 @@
  font-family:Arial, sans-serif;
 }
 
-
 body{
  margin:0;
  min-height:100vh;
- background:#120b1f;
+ background:#1f2937; /* softer dark, not too deep */
  display:flex;
  justify-content:center;
  align-items:center;
 }
 
-
 .game{
  width:420px;
 }
-
 
 header{
  display:flex;
@@ -26,183 +23,109 @@ header{
  margin-bottom:40px;
 }
 
-
 .logo{
  font-size:45px;
  font-weight:bold;
 }
 
-
 .x{
- color:#ff5c8a;
+ color:#22c55e; /* bright green X */
 }
-
 
 .o{
- color:#a855f7;
+ color:#f97316; /* orange O */
 }
-
 
 button{
-
-border:none;
-cursor:pointer;
-border-radius:10px;
-
-background:#2a1740;
-color:#ffffff;
-
-padding:15px 25px;
-font-weight:bold;
-
+ border:none;
+ cursor:pointer;
+ border-radius:10px;
+ background:#374151;
+ color:#ffffff;
+ padding:15px 25px;
+ font-weight:bold;
+ transition:0.2s;
 }
-
 
 button:hover{
-
-background:#3b2160;
-transform:scale(1.05);
-
+ background:#4b5563;
+ transform:scale(1.05);
 }
-
-
 
 .board{
-
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px;
-
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:18px;
 }
-
-
 
 .cell{
-
-height:120px;
-
-background:#241438;
-
-border-radius:15px;
-
-box-shadow:0 8px #0b0612;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-font-size:70px;
-
-cursor:pointer;
-
+ height:120px;
+ background:#111827;
+ border-radius:15px;
+ box-shadow:0 8px #0b1220;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ font-size:70px;
+ cursor:pointer;
+ transition:0.2s;
 }
-
-
 
 .cell:hover{
-
-background:#351c52;
-
+ background:#1f2937;
 }
-
-
 
 .xmark{
-
-color:#ff5c8a;
-
+ color:#22c55e;
 }
-
-
 
 .omark{
-
-color:#a855f7;
-
+ color:#f97316;
 }
-
-
 
 .scores{
-
-margin-top:45px;
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:15px;
-
+ margin-top:45px;
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:15px;
 }
-
-
 
 .scores div{
-
-text-align:center;
-
-padding:20px;
-
-border-radius:15px;
-
+ text-align:center;
+ padding:20px;
+ border-radius:15px;
 }
-
-
 
 .you{
-
-background:#ff5c8a;
-
+ background:#22c55e;
+ color:#000;
 }
-
-
 
 .ties{
-
-background:#e9d5ff;
-
+ background:#e5e7eb;
+ color:#000;
 }
-
-
 
 .cpu{
-
-background:#a855f7;
-
+ background:#f97316;
+ color:#000;
 }
-
-
 
 small{
-
-display:block;
-
+ display:block;
 }
-
 
 b{
-
-font-size:28px;
-
+ font-size:28px;
 }
-
-
 
 @media(max-width:500px){
+ .game{
+  width:90%;
+ }
 
-.game{
-
-width:90%;
-
-}
-
-
-.cell{
-
-height:90px;
-
-font-size:55px;
-
-}
-
+ .cell{
+  height:90px;
+  font-size:55px;
+ }
 }
