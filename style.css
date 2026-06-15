@@ -6,14 +6,33 @@
 body{
  margin:0;
  min-height:100vh;
- background:#1f2937; /* softer dark, not too deep */
+ background:#1f2937;
  display:flex;
  justify-content:center;
  align-items:center;
+ flex-direction:column;
+}
+
+.start-screen{
+ display:flex;
+ flex-direction:column;
+ gap:15px;
+ text-align:center;
+ color:white;
+}
+
+.start-screen button{
+ padding:12px 20px;
+ border:none;
+ border-radius:10px;
+ cursor:pointer;
+ background:#374151;
+ color:white;
 }
 
 .game{
  width:420px;
+ display:none;
 }
 
 header{
@@ -28,28 +47,21 @@ header{
  font-weight:bold;
 }
 
-.x{
- color:#22c55e; /* bright green X */
-}
-
-.o{
- color:#f97316; /* orange O */
-}
+.x{ color:#22c55e; }
+.o{ color:#f97316; }
 
 button{
  border:none;
  cursor:pointer;
  border-radius:10px;
  background:#374151;
- color:#ffffff;
+ color:#fff;
  padding:15px 25px;
  font-weight:bold;
- transition:0.2s;
 }
 
 button:hover{
  background:#4b5563;
- transform:scale(1.05);
 }
 
 .board{
@@ -62,29 +74,22 @@ button:hover{
  height:120px;
  background:#111827;
  border-radius:15px;
- box-shadow:0 8px #0b1220;
  display:flex;
  align-items:center;
  justify-content:center;
  font-size:70px;
  cursor:pointer;
- transition:0.2s;
 }
 
 .cell:hover{
  background:#1f2937;
 }
 
-.xmark{
- color:#22c55e;
-}
-
-.omark{
- color:#f97316;
-}
+.xmark{ color:#22c55e; }
+.omark{ color:#f97316; }
 
 .scores{
- margin-top:45px;
+ margin-top:40px;
  display:grid;
  grid-template-columns:repeat(3,1fr);
  gap:15px;
@@ -96,36 +101,14 @@ button:hover{
  border-radius:15px;
 }
 
-.you{
- background:#22c55e;
- color:#000;
-}
+.you{ background:#22c55e; color:black; }
+.ties{ background:#e5e7eb; color:black; }
+.cpu{ background:#f97316; color:black; }
 
-.ties{
- background:#e5e7eb;
- color:#000;
-}
-
-.cpu{
- background:#f97316;
- color:#000;
-}
-
-small{
- display:block;
-}
-
-b{
- font-size:28px;
-}
+small{ display:block; }
+b{ font-size:28px; }
 
 @media(max-width:500px){
- .game{
-  width:90%;
- }
-
- .cell{
-  height:90px;
-  font-size:55px;
- }
+ .game{ width:90%; }
+ .cell{ height:90px; font-size:55px; }
 }
